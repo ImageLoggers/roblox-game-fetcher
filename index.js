@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const fetch = require('node-fetch');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -27,6 +26,7 @@ app.get('/fetch-game', async (req, res) => {
             res.status(404).json({ error: 'Game not found' });
         }
     } catch (error) {
+        console.error('Error:', error);
         res.status(500).json({ error: 'Failed to fetch game' });
     }
 });
@@ -35,6 +35,6 @@ app.get('/', (req, res) => {
     res.send('Roblox Game Fetcher Bot is running!');
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
 });
