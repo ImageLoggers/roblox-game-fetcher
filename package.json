@@ -1,0 +1,14 @@
+{
+  "name": "roblox-game-fetcher",
+  "version": "1.0.0",
+  "description": "Fetches Roblox game names",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "node-fetch": "^2.7.0"
+  }
+}
